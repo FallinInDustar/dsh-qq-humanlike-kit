@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+out/
+*.jsonl
+node_modules/
+.env
+mood.env

@@ -1,0 +1,36 @@
+{
+  "_说明": "合并进 <dataDir>/config.json（dsh-onebot-qq 实例配置）的 pluginConfig 段。只列本套件的插件；其余字段保持你自己的。改完重启 DSH。",
+  "pluginConfig": {
+    "fish-render": {
+      "enabled": true,
+      "particleCut": 0.8,
+      "atKeep": 0.5,
+      "leadQuestionKeep": 0.3,
+      "punctFill": 0.45,
+      "ellipsisToComma": true,
+      "selfRefKeep": 1,
+      "selfRefMax": 99,
+      "_TODO": "这些概率应来自你自己群的真人基线（tools/clean_qce.py 产出），不要照抄。selfRefKeep 只在你的角色有固定自称时调，自称词在 index.js 规则 7 里改"
+    },
+    "meta-guard": {
+      "enabled": true,
+      "inbound": true,
+      "outbound": true,
+      "botNames": "【填：群友平时怎么叫她，逗号分隔，如 小X,X酱】",
+      "selfNames": "【填：她的固定自称，逗号分隔；没有就留空。「我」默认包含】",
+      "dodges": "【填：出口兜底时整条替换用的短句，一行一句，用你角色的口吻】",
+      "hintLight": "【可留空=用代码默认。写法纪律：只写态度和动作，不放名词，否则会被原样念出来】",
+      "hintAnnoyed": "【可留空=用代码默认】",
+      "personLimit": 2,
+      "personWindowMin": 30,
+      "groupLimit": 4,
+      "groupWindowMin": 10
+    },
+    "private-memory": {
+      "enabled": true,
+      "dir": "qq-memory",
+      "maxBytes": 8000,
+      "allowWrite": true
+    }
+  }
+}

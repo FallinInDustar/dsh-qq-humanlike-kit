@@ -1,0 +1,23 @@
+{
+  "_说明": "放到 QQ_THROTTLE_FILE 指向的路径（默认 /root/.dsh/throttle.json），3 秒内热生效，不用重启",
+  "rate": {
+    "enabled": true,
+    "perMinute": 12,
+    "perHour": 60,
+    "perDay": 300,
+    "minGapMs": 1500,
+    "maxWaitMs": 45000
+  },
+  "typing": {
+    "enabled": true,
+    "minMs": 3000,
+    "longAt": 100,
+    "longMs": 10000,
+    "perCharMs": 60,
+    "maxMs": 20000,
+    "jitter": 0.25,
+    "dist": "lognormal",
+    "medianMs": 3000,
+    "p90Ms": 9000
+  }
+}
